@@ -33,7 +33,37 @@ namespace BLL
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<News>(n);
+            data.Date = DateTime.Today;
             DataAccessFactory.NewsDataAcess().Add(data);
         }
+
+
+        public static void Edit(NewsModel n)
+        {
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<NewsModel, News>();
+
+            });
+            var mapper = new Mapper(config);
+            var data = mapper.Map<News>(n);
+            DataAccessFactory.NewsDataAcess().Edit(data);
+        }
+
+        public static void Delete(NewsModel n)
+        {
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<NewsModel, News>();
+
+            });
+            var mapper = new Mapper(config);
+            var data = mapper.Map<News>(n);
+            DataAccessFactory.NewsDataAcess().Delete(data);
+        }
+
+
+        //####################################################################
+
     }
 }

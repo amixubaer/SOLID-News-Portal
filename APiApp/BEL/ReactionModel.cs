@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BEL
 {
-    class ReactionModel
+    public class ReactionModel
     {
         public int Id { get; set; }
-        public int React { get; set; }
+        public string React { get; set; }
         public int NewsId { get; set; }
         public int UserId { get; set; }
     }

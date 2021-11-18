@@ -17,5 +17,24 @@ namespace DAL
         {
             return new NewsRepo(db);
         }
+
+        public static IRepo<Category> CategoryDataAcess()
+        {
+            return new CategoryRepo(db);
+        }
+
+        public static IRepo<Comment, int> CommentDataAcess()
+        {
+            return new CommentRepo(db);
+        }
+
+        public static IRepo<Reaction, int> ReactionDataAcess()
+        {
+            return new ReactionRepo(db);
+        }
+
+
+
+
     }
 }

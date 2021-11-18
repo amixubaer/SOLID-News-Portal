@@ -45,7 +45,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="React" Type="int" Nullable="false" />
+          <Property Name="React" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="NewsId" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
@@ -214,7 +214,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="React" Type="Int32" Nullable="false" />
+          <Property Name="React" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NewsId" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="News" Relationship="Self.FK_Reactions_News" FromRole="Reactions" ToRole="News" />

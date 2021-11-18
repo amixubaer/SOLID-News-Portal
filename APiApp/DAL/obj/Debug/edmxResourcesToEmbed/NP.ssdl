@@ -40,7 +40,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="React" Type="int" Nullable="false" />
+    <Property Name="React" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="NewsId" Type="int" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>

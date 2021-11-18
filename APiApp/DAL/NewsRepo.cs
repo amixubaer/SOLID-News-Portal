@@ -21,19 +21,21 @@ namespace DAL
             db.SaveChanges();
         }
 
-        public void Delete(int id)
-        {
-            var n = db.News.FirstOrDefault(e => e.Id == id);
-            db.News.Remove(n);
-            db.SaveChanges();
-        }
-
         public void Edit(News e)
         {
             var n = db.News.FirstOrDefault(en => en.Id == e.Id);
             db.Entry(n).CurrentValues.SetValues(e);
             db.SaveChanges();
         }
+
+        public void Delete(News e)
+        {
+            var n = db.News.FirstOrDefault(en => en.Id == e.Id);
+            db.News.Remove(n);
+            db.SaveChanges();
+        }
+
+
 
         public List<News> Get()
         {

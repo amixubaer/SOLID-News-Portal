@@ -15,7 +15,7 @@ namespace DAL
     public partial class Reaction
     {
         public int Id { get; set; }
-        public int React { get; set; }
+        public string React { get; set; }
         public int NewsId { get; set; }
         public int UserId { get; set; }
     
